@@ -1,6 +1,14 @@
 
 # Alpha
 
+# For PWA Feature
+Step 0. git checkout pwa
+Step 1. npm i -g http-server
+Step 2. ng build
+Step 3. http-server ./dist/alpha
+Step 4. go to http://127.0.0.1:8080/
+
+
 ## Introduction
 
 Alpha is an Angular application designed to provide an engaging user experience. This project includes the use of Angular Material for UI components and follows best practices for modern web development.
