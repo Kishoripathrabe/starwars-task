@@ -12,12 +12,12 @@ import { forkJoin, map, of, switchMap } from 'rxjs';
 export class CharacterDetailsComponent {
   person: any;
   films: any;
-  
+
   constructor(private route: ActivatedRoute, private http: HttpClient,private apiService:ApiService) { }
 
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id');
-    this.apiService.singlePersonReq(id).pipe(switchMap((value: any) => {
+    of({}).pipe(switchMap((value: any) => {
     this.person = value;
     let rarr = value.films.map((filmUrl: any) =>{
         return (this.http.get(filmUrl)); 

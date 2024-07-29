@@ -7,6 +7,14 @@ Step 2. npm install (sometimes need to add material aditionally - ng add @angula
 Step 5. ng serve
 Running on (http://localhost:4200/)
 
+# For PWA Feature
+Step 0. git checkout pwa
+Step 1. npm i -g http-server
+Step 2. ng build
+Step 3. http-server ./dist/alpha
+Step 4. go to http://127.0.0.1:8080/
+
+
 
 ## Development server
 

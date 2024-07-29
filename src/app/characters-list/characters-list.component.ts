@@ -44,11 +44,12 @@ export class CharactersListComponent implements OnInit {
     this.apiService.getData('people',`page=${page}&search=${sQuery}`).subscribe((res: any) => {
       this.people = res?.results?.map((person: any) => {
         let pid = this.getPid(person);
-        person['isFavorite'] = from(this.apiService.getFavorite(pid));
+        person['isFavorite'] = (this.apiService.getFavorite(pid));
         return person;
       })
       this.totalPeople = res.count;
     })
+    console.log(this.people)
   }
 
   onPageChange(event: PageEvent): void {
