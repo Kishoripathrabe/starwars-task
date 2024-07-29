@@ -1,0 +1,35 @@
+<mat-card *ngIf="person" class="person-card">
+    <mat-card-header class="person-header">
+        <mat-card-title>{{ person.name }}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <div class="person-details">
+            <p><strong>Height:</strong> {{ person.height }}</p>
+            <p><strong>Mass:</strong> {{ person.mass }}</p>
+            <p><strong>Hair Color:</strong> {{ person.hair_color }}</p>
+            <p><strong>Skin Color:</strong> {{ person.skin_color }}</p>
+            <p><strong>Eye Color:</strong> {{ person.eye_color }}</p>
+            <p><strong>Birth Year:</strong> {{ person.birth_year }}</p>
+            <p><strong>Gender:</strong> {{ person.gender }}</p>
+        </div>
+        <h3 class="films-title">Films</h3>
+        <ng-container *ngFor="let film of films">
+            <mat-card class="film-card">
+                <mat-card-header class="film-header">
+                    <mat-card-title>{{ film.title }}</mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                    <div class="film-details">
+                        <p><strong>Directed by:</strong> {{ film.director }}</p>
+                        <p><strong>Produced by:</strong> {{ film.producer }}</p>
+                        <p><strong>Release Date:</strong> {{ film.release_date }}</p>
+                    </div>
+                    <p><strong>Opening Crawl:</strong></p>
+                    <p class="opening-crawl">{{ film.opening_crawl }}</p>
+                </mat-card-content>
+            </mat-card>
+        </ng-container>
+    </mat-card-content>
+</mat-card>
+<hr>
+<hr>

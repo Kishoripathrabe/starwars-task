@@ -1,0 +1,60 @@
+.person-card {
+    background-color: #1a1a1a;
+    color: #f5f5f5;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.person-header {
+    background-color: #212121;
+    border-bottom: 1px solid #444;
+    padding-bottom: 10px;
+}
+
+.person-details p {
+    margin: 5px 0;
+}
+
+.divider {
+    margin: 20px 0;
+    border-color: #444;
+}
+
+.films-title {
+    color: #f5f5f5;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.film-card {
+    background-color: #282828;
+    color: #f5f5f5;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.film-header {
+    background-color: #333;
+    border-bottom: 1px solid #555;
+    padding-bottom: 10px;
+}
+
+.film-details {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.film-details p {
+    margin: 5px 0;
+    color: #ffd700;
+}
+
+.opening-crawl {
+    font-family: 'Courier New', Courier, monospace;
+    color: #ffa726;
+}
+
+

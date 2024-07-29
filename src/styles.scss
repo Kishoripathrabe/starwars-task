@@ -1,0 +1,14 @@
+/* You can add global styles to this file, and also import other style files */
+
+@font-face {
+    font-family: 'Starjedi';
+    src: url('./assets/fonts/Starjedi.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+html, body { height: 100%;background-color: rgb(88, 79, 79); }
+
+h1 {
+    margin: 0;
+    font-family: 'Starjedi'!important;
+}

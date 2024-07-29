@@ -1,0 +1,53 @@
+<hr>
+<div>
+    <span class="searchBox">
+         <input matInput  class="searchBoxInput" placeholder="Search By Name" type="text" [formControl]="searchControl" />
+    </span>
+</div>
+<div class="table-container">
+    <table mat-table [dataSource]="people" class="mat-elevation-z8">
+        <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef> Name </th>
+            <td mat-cell *matCellDef="let person"> {{ person.name }} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="height">
+            <th mat-header-cell *matHeaderCellDef> Height </th>
+            <td mat-cell *matCellDef="let person"> {{ person.height }} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="mass">
+            <th mat-header-cell *matHeaderCellDef> Mass </th>
+            <td mat-cell *matCellDef="let person"> {{ person.mass }} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="birth_year">
+            <th mat-header-cell *matHeaderCellDef> Birth Year </th>
+            <td mat-cell *matCellDef="let person"> {{ person.birth_year }} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="actions">
+            <th mat-header-cell *matHeaderCellDef> Actions </th>
+            <td mat-cell *matCellDef="let person">
+                <button mat-button (click)="viewDetails(person)">View Details</button>
+            </td>
+        </ng-container>
+
+        <ng-container matColumnDef="favorites">
+            <th mat-header-cell *matHeaderCellDef> Favorite </th>
+            <td mat-cell *matCellDef="let person">
+                <button mat-icon-button (click)="toggleFavorite(person)">
+                        <mat-icon [ngClass]="{'favorite': person?.isFavorite |async }">favorite</mat-icon>
+                </button>
+            </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+    <mat-paginator #paginator [length]="totalPeople" [pageSize]="pageSize" (page)="onPageChange($event)">
+    </mat-paginator>
+</div>
+<hr>
+<hr>
