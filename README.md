@@ -1,11 +1,5 @@
+
 # Alpha
-Step 0 : Required Installations are VS code , Angular 15.2.11 , Node 14.21.3 , Npm 6.14.18
-Step 1. Open VS Studio
-Step 2. git clone https://github.com/Kishoripathrabe/starwars-task.git
-step 2. cd alpha
-Step 2. npm install (sometimes need to add material aditionally - ng add @angular/material@15.2.9)
-Step 5. ng serve
-Running on (http://localhost:4200/)
 
 # For PWA Feature
 Step 0. git checkout pwa
@@ -15,6 +9,70 @@ Step 3. http-server ./dist/alpha
 Step 4. go to http://127.0.0.1:8080/
 
 
+## Introduction
+
+Alpha is an Angular application designed to provide an engaging user experience. This project includes the use of Angular Material for UI components and follows best practices for modern web development.
+
+## Prerequisites
+
+Before you begin, ensure you have the following installed:
+
+- **Visual Studio Code (VSCode)**
+- **Angular CLI 15.2.11**
+- **Node.js 14.21.3**
+- **npm 6.14.18**
+
+## Installation Guide
+
+### Step 0: Install Required Software
+
+Ensure the following software is installed on your machine:
+
+- **Visual Studio Code**: Download and install from [VSCode Official Website](https://code.visualstudio.com/).
+- **Node.js**: Download and install from [Node.js Official Website](https://nodejs.org/). Node.js installation will include npm.
+- **Angular CLI**: Install Angular CLI globally using npm.
+  ```bash
+  npm install -g @angular/cli@15.2.11
+  ```
+
+### Step 1: Clone the Repository
+
+Open Visual Studio Code and clone the repository using the integrated terminal or command prompt.
+
+```bash
+git clone https://github.com/Kishoripathrabe/starwars-task.git
+```
+
+### Step 2: Change Directory to Project
+
+Navigate to the project directory.
+
+```bash
+cd starwars-task
+```
+
+### Step 3: Install Dependencies
+
+Install the required npm packages.
+
+```bash
+npm install
+```
+
+> **Note**: If Angular Material is not installed, you can add it manually.
+```bash
+ng add @angular/material@15.2.9
+```
+
+### Step 4: Serve the Application
+
+Run the Angular application locally.
+
+```bash
+ng serve
+```
+
+By default, the application will be accessible at `http://localhost:4200/`.
 
 ## Development server
 
