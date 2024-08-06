@@ -8,6 +8,7 @@ import { Observable } from 'rxjs/internal/Observable';
 })
 export class ApiService {
   private baseUrl = 'https://swapi.dev/api/';
+  private singleUrl = "https://swapi.dev/api/people"
   private apiCacheName = 'api-cache';
 
   constructor(private http: HttpClient) { }
@@ -31,11 +32,16 @@ export class ApiService {
   return favoriteArr.includes(pid);
 }
 
+getSingleData(pid: any) {
+  return this.http.get(this.singleUrl+'/'+pid)  ;  
+}
+
 
   initializeEndpoints(): Observable<any> {
     return this.http.get(this.baseUrl)    
   }
 
+  
 
   fetchFromEndpoint(data: any, key: string, psQuery: any): Observable<any> {
     const url = data[key];

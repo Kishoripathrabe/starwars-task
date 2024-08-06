@@ -17,7 +17,7 @@ export class CharacterDetailsComponent {
 
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id');
-    of({}).pipe(switchMap((value: any) => {
+    this.apiService.getSingleData(id).pipe(switchMap((value: any) => {
     this.person = value;
     let rarr = value.films.map((filmUrl: any) =>{
         return (this.http.get(filmUrl)); 
